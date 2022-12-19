@@ -15,6 +15,7 @@ specifiers:
   eslint: ^8.26.0
   eslint-config-next: 13.0.2
   framer-motion: ^7.10.2
+  framer-motion-3d: ^7.10.2
   next: 13.0.2
   next-auth: ^4.18.3
   postcss: ^8.4.14
@@ -35,6 +36,7 @@ dependencies:
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@types/three': 0.146.0
   framer-motion: 7.10.2_biqbaboplfbrettd7655fr4n2y
+  framer-motion-3d: 7.10.2_xa6xk36nauwxkzngvitxgjpnr4
   next: 13.0.2_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.18.6_pknogjuzx4bv7zxtatcb2ahtsq
   react: 18.2.0
@@ -1547,6 +1549,22 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
+  /framer-motion-3d/7.10.2_xa6xk36nauwxkzngvitxgjpnr4:
+    resolution: {integrity: sha512-pv9DW1lsonuibByHib2wMO+F6R2C28zUkp3Id8aeN3DzDpXSbDYi8rs2jcpWpBeEmx01y495adh/N72HhTI2kA==}
+    peerDependencies:
+      '@react-three/fiber': ^8.2.2
+      react: '>=18.0'
+      react-dom: '>=18.0'
+      three: '>=0.133'
+    dependencies:
+      '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
+      framer-motion: 7.10.2_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-merge-refs: 2.0.1
+      three: 0.147.0
+    dev: false
+
   /framer-motion/7.10.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-2OAII9hjpMNz2Nbl2w09uKo7A0bD6xRtGnCZbPzuGGueucWgmSBLjAwzPhXwzCQWMpL3LU8jmXHjxAwIyjslxg==}
     peerDependencies:
@@ -2468,6 +2486,10 @@ packages:
 
   /react-merge-refs/1.1.0:
     resolution: {integrity: sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==}
+    dev: false
+
+  /react-merge-refs/2.0.1:
+    resolution: {integrity: sha512-pywF6oouJWuqL26xV3OruRSIqai31R9SdJX/I3gP2q8jLxUnA1IwXcLW8werUHLZOrp4N7YOeQNZrh/BKrHI4A==}
     dev: false
 
   /react-reconciler/0.27.0_react@18.2.0:
