@@ -78,6 +78,14 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <a
+        href="https://github.com/MohamedBechirMejri"
+        target="_blank"
+        rel="noreferrer"
+        className="text-lg font-medium transition-all hover:underline"
+      >
+        80+ More
+      </a>
     </div>
   );
 };
