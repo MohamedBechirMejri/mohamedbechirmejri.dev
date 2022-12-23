@@ -1,0 +1,22 @@
+[
+  {
+    "name": "email",
+    "link": "mailto:mohamedbechirmejri.dev@gmail.com"
+  },
+  {
+    "name": "linkedin",
+    "link": "https://www.linkedin.com/in/MohamedBechirMejri/"
+  },
+  {
+    "name": "github",
+    "link": "https://github.com/MohamedBechirMejri/"
+  },
+  {
+    "name": "facebook",
+    "link": "https://www.facebook.com/MohamedBechirMejri"
+  },
+  {
+    "name": "twitter",
+    "link": "https://twitter.com/MohamedBechirMe"
+  }
+]
