@@ -15,6 +15,7 @@ specifiers:
   '@types/three': ^0.146.0
   '@typescript-eslint/eslint-plugin': ^5.33.0
   '@typescript-eslint/parser': ^5.33.0
+  '@vercel/analytics': ^0.1.6
   autoprefixer: ^10.4.7
   eslint: ^8.26.0
   eslint-config-next: 13.0.2
@@ -41,6 +42,7 @@ dependencies:
   '@react-three/drei': 9.47.1_xa6xk36nauwxkzngvitxgjpnr4
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@types/three': 0.146.0
+  '@vercel/analytics': 0.1.6_react@18.2.0
   framer-motion: 7.10.2_biqbaboplfbrettd7655fr4n2y
   framer-motion-3d: 7.10.2_xa6xk36nauwxkzngvitxgjpnr4
   next: 13.0.2_biqbaboplfbrettd7655fr4n2y
@@ -765,6 +767,14 @@ packages:
       react: '>= 16.8.0'
     dependencies:
       '@use-gesture/core': 10.2.23
+      react: 18.2.0
+    dev: false
+
+  /@vercel/analytics/0.1.6_react@18.2.0:
+    resolution: {integrity: sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
       react: 18.2.0
     dev: false
 
