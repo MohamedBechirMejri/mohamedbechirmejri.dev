@@ -2,7 +2,10 @@ import projects from "../../public/json/projects.json";
 
 const Projects = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center gap-24">
+    <div
+      id="projects"
+      className="flex min-h-screen w-full flex-col items-center justify-center gap-24"
+    >
       <h1 className="text-4xl font-bold">My Projects</h1>
       <div className="flex flex-wrap items-center justify-center gap-8">
         {projects.map((p, i) => (

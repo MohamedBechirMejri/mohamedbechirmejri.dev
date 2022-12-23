@@ -1,6 +1,9 @@
 const Hero = () => {
   return (
-    <div className="flex h-screen w-full items-center justify-center p-8">
+    <div
+      id="hero"
+      className="flex h-screen w-full items-center justify-center p-8"
+    >
       <div className="flex flex-col gap-4">
         <h1 className="text-7xl font-bold transition-all sm:text-8xl">
           Mohamed Bechir <br /> Mejri

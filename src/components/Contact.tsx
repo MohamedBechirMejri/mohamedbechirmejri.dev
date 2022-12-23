@@ -2,7 +2,10 @@ import socialLinks from "../../public/json/socialLinks.json";
 
 const Contact = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center gap-24">
+    <div
+      id="contact"
+      className="flex min-h-screen w-full flex-col items-center justify-center gap-24"
+    >
       <h1 className="text-4xl font-bold">Connect with Me</h1>
       <div className="flex flex-wrap items-center justify-center gap-8">
         {socialLinks.map((l, i) => (
