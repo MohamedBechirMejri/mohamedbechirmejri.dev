@@ -2,7 +2,7 @@ import projects from "../../public/json/projects.json";
 
 const Projects = () => {
   return (
-    <div
+    <section
       id="projects"
       className="flex min-h-screen w-full flex-col items-center justify-center gap-24"
     >
@@ -41,7 +41,7 @@ const Projects = () => {
       >
         80+ More
       </a>
-    </div>
+    </section>
   );
 };
 

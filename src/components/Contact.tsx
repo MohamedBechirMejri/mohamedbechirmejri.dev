@@ -2,7 +2,7 @@ import socialLinks from "../../public/json/socialLinks.json";
 
 const Contact = () => {
   return (
-    <div
+    <section
       id="contact"
       className="flex min-h-screen w-full flex-col items-center justify-center gap-24"
     >
@@ -20,7 +20,7 @@ const Contact = () => {
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

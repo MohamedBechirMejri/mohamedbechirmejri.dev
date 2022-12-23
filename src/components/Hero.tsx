@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div
+    <section
       id="hero"
       className="flex h-screen w-full items-center justify-center p-8"
     >
@@ -10,7 +10,7 @@ const Hero = () => {
         </h1>
         <p className="text-3xl">full-stack web developer</p>
       </div>
-    </div>
+    </section>
   );
 };
 
