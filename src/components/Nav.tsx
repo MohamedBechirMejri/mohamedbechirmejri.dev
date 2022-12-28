@@ -38,7 +38,7 @@ const Nav = ({ children }: { children: React.ReactNode }) => {
               scale: isOpen ? 1 : 0,
             }}
             transition={{ type: "spring", damping: 27, stiffness: 150 }}
-            className="flex h-full w-full items-center justify-center rounded-3xl text-5xl"
+            className="flex h-full w-full items-center justify-center rounded-3xl text-3xl lg:text-5xl"
           >
             <Link href={link.url} onClick={() => setIsOpen(false)}>
               {link.name}
