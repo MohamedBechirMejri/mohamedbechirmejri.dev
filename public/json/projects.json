@@ -2,8 +2,8 @@
   {
     "name": "nyutab",
     "description": "A Better NewTab page for Chrome/FireFox (WIP)",
-    "tech": ["ReactJS", "TailwindCSS"],
-    "demo": "https://google.com",
+    "tech": ["ReactJS", "TailwindCSS", "framer-motion", "APIs"],
+    "demo": "https://nyutab.vercel.app",
     "source": "https://github.com/MohamedBechirMejri/nyutab"
   },
   {
