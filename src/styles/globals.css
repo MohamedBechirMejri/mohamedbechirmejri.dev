@@ -2,18 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url(../../public/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-}
-
 /* hide scrollbar */
 *::-webkit-scrollbar {
   width: 0px;
   height: 100%;
-}
-
-body {
-  background-color: #14532d;
 }
