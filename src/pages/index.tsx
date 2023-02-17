@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { FcSettings } from "react-icons/fc";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <>
       <Head>
