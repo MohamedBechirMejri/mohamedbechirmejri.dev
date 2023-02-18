@@ -1,5 +1,7 @@
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import Head from "next/head";
-import { FcSettings } from "react-icons/fc";
+import Laptop from "../components/Laptop";
 
 const Home = () => {
   return (
@@ -9,11 +11,27 @@ const Home = () => {
         <meta name="description" content="MBM" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="grid min-h-[100svh] place-items-center text-7xl font-bold">
-        <span className="relative animate-pulse">
-          Under construction{" "}
-          <FcSettings className="absolute -top-full -right-8 animate-spin" />
-        </span>
+      <div className="h-[100svh] w-[100svw]">
+        <Canvas className="bg-black bg-opacity-60">
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+          <spotLight
+            position={[-10, -10, -10]}
+            angle={0.15}
+            penumbra={1}
+            castShadow
+          />
+          <spotLight
+            position={[0, 10, -2]}
+            angle={0.15}
+            penumbra={1}
+            castShadow
+          />
+
+          <Laptop />
+          <OrbitControls />
+        </Canvas>
       </div>
     </>
   );
