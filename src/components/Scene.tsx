@@ -9,8 +9,9 @@ Source: https://sketchfab.com/3d-models/asus-rog-zephyrus-duo-16-479cb2e29c7a443
 Title: Asus ROG Zephyrus Duo 16
 */
 
-import React, { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { LoopOnce } from "three";
 
 export function Model(props: any) {
   const group = useRef();
@@ -19,6 +20,17 @@ export function Model(props: any) {
     "/assets/3d/asus_rog_zephyrus_duo_16/scene.gltf"
   );
   const { actions } = useAnimations(animations, group);
+
+  useEffect(() => {
+    if (actions["Animation"]) {
+      const animation = actions["Animation"];
+      animation.loop = LoopOnce;
+      animation.clampWhenFinished = true;
+      animation.play();
+    }
+    console.log(actions);
+  }, [actions]);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -156,7 +168,7 @@ export function Model(props: any) {
               </group>
               <group
                 name="key_name001_3"
-                position={[0, -0.1, -0.13]}
+                position={[0, -0.0955, -0.135]}
                 rotation={[-0.05, 0, 0]}
                 scale={0.12}
               >
