@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
 /*
@@ -11,9 +12,10 @@ Title: Asus ROG Zephyrus Duo 16
 
 import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations, Html } from "@react-three/drei";
-import { LoopOnce } from "three";
+import { LoopOnce, MathUtils } from "three";
 
 import Screen1 from "./Screen1";
+import { useFrame } from "@react-three/fiber";
 
 export function Laptop(props: any) {
   const group = useRef();
@@ -31,6 +33,38 @@ export function Laptop(props: any) {
       animation.play();
     }
   }, [actions]);
+
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    // @ts-ignore
+    group.current!.rotation.x = MathUtils.lerp(
+      // @ts-ignore
+      group.current!.rotation.x,
+      Math.cos(t / 2) / 20 + 0.25,
+      0.1
+    );
+    // @ts-ignore
+    group.current!.rotation.y = MathUtils.lerp(
+      // @ts-ignore
+      group.current!.rotation.y,
+      Math.sin(t / 4) / 20,
+      0.1
+    );
+    // @ts-ignore
+    group.current!.rotation.z = MathUtils.lerp(
+      // @ts-ignore
+      group.current!.rotation.z,
+      Math.sin(t / 8) / 20,
+      0.1
+    );
+    // @ts-ignore
+    group.current!.position.y = MathUtils.lerp(
+      // @ts-ignore
+      group.current!.position.y,
+      (-2 + Math.sin(t / 2)) / 20,
+      0.1
+    );
+  });
 
   return (
     <group ref={group} {...props} dispose={null}>
