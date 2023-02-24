@@ -11,7 +11,7 @@ const Screen1 = () => {
   } | null>(null);
 
   return (
-    <div className="grid h-full select-none place-items-center bg-[url(https://picsum.photos/2000)] bg-cover bg-center bg-no-repeat">
+    <div className="grid h-full select-none place-items-center bg-[url(/assets/op.jpg)] bg-cover bg-center bg-no-repeat">
       <div className="grid h-[11.5rem] w-[20rem] grid-cols-3 overflow-hidden rounded-xl text-[8px] elevation-8">
         <nav className="bg-white bg-opacity-25 p-[8px] py-[12px] backdrop-blur-xl">
           <h1 className="pb-[8px] font-bold">Mohamed Bechir Mejri</h1>
