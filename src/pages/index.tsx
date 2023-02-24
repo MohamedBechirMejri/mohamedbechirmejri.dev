@@ -14,7 +14,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-[100svh] w-[100svw]">
-        <Canvas className="bg-black bg-opacity-60">
+        <Canvas className="bg-black bg-opacity-0">
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />

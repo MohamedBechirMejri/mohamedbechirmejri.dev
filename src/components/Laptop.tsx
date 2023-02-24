@@ -13,6 +13,8 @@ import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations, Html } from "@react-three/drei";
 import { LoopOnce } from "three";
 
+import Screen1 from "./Screen1";
+
 export function Laptop(props: any) {
   const group = useRef();
   // @ts-ignore
@@ -96,17 +98,17 @@ export function Laptop(props: any) {
                   material={materials.displauy}
                 >
                   <Html
-                    className="h-[13.72rem] w-[22rem] bg-white"
+                    className="h-[13.8rem] w-[22.1rem]"
                     rotation-x={0}
                     position={[0, 3.63, -0.15]}
                     transform
                     occlude
                   >
                     <div
-                      className="wrapper"
+                      className="h-full"
                       onPointerDown={(e) => e.stopPropagation()}
                     >
-                      <h1>test</h1>
+                      <Screen1 />
                     </div>
                   </Html>
                 </mesh>
