@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Html } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import Head from "next/head";
 import { Laptop } from "../components/Laptop";
 
@@ -32,22 +32,7 @@ const Home = () => {
           />
 
           <Laptop />
-          {/* <mesh geometry={nodes["92.2_6"].geometry}>
-            <Html
-              className="bg-white"
-              rotation-x={-Math.PI / 2}
-              position={[0, 0.05, -0.09]}
-              transform
-              occlude
-            >
-              <div
-                className="wrapper"
-                onPointerDown={(e) => e.stopPropagation()}
-              >
-                <h1>test</h1>
-              </div>
-            </Html>
-          </mesh> */}
+
           <OrbitControls />
         </Canvas>
       </div>

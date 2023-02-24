@@ -10,7 +10,7 @@ Title: Asus ROG Zephyrus Duo 16
 */
 
 import { useEffect, useRef } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF, useAnimations, Html } from "@react-three/drei";
 import { LoopOnce } from "three";
 
 export function Laptop(props: any) {
@@ -28,7 +28,6 @@ export function Laptop(props: any) {
       animation.clampWhenFinished = true;
       animation.play();
     }
-    console.log(nodes);
   }, [actions]);
 
   return (
@@ -95,7 +94,22 @@ export function Laptop(props: any) {
                   name="Object_22"
                   geometry={nodes.Object_22.geometry}
                   material={materials.displauy}
-                />
+                >
+                  <Html
+                    className="h-[13.72rem] w-[22rem] bg-white"
+                    rotation-x={0}
+                    position={[0, 3.63, -0.15]}
+                    transform
+                    occlude
+                  >
+                    <div
+                      className="wrapper"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      <h1>test</h1>
+                    </div>
+                  </Html>
+                </mesh>
                 <mesh
                   name="Object_23"
                   geometry={nodes.Object_23.geometry}
