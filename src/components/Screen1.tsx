@@ -39,7 +39,7 @@ const Screen1 = () => {
             ))}
           </ul>
         </nav>
-        <main className="col-span-2 overflow-y-scroll bg-white">
+        <main className="relative col-span-2 overflow-y-scroll bg-white">
           {project ? (
             <div className="flex h-full flex-col items-center justify-center gap-2">
               <h1 className="">{project.name}</h1>
@@ -73,7 +73,7 @@ const Screen1 = () => {
               </div>
             </div>
           ) : (
-            <div className="flex h-full flex-col items-center justify-center gap-2 p-3">
+            <div className="relative flex h-full flex-col items-center justify-center gap-2 p-3">
               <Image
                 src="/favicon.ico"
                 alt="logo"

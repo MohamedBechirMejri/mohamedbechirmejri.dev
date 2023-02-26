@@ -6,7 +6,7 @@ import Head from "next/head";
 import { Laptop } from "../components/Laptop";
 import { Suspense } from "react";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <>
       <Head>
