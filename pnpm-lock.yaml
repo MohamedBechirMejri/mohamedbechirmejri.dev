@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@next-auth/prisma-adapter': ^1.0.5
-  '@next/font': ^13.2.3
   '@prisma/client': ^4.11.0
   '@react-three/drei': ^9.57.0
   '@react-three/fiber': ^8.11.5
@@ -41,7 +40,6 @@ specifiers:
 
 dependencies:
   '@next-auth/prisma-adapter': 1.0.5_knaw3qxw4zwoiwojd3fn43zthi
-  '@next/font': 13.2.3
   '@prisma/client': 4.11.0_prisma@4.11.0
   '@react-three/drei': 9.57.0_inexst6w7ngy4lgswyvo7qonpy
   '@react-three/fiber': 8.11.5_73epb4osyabtjyiaeamriercbi
@@ -200,10 +198,6 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
-
-  /@next/font/13.2.3:
-    resolution: {integrity: sha512-7EHzk0f7FVYICLUZTpyPk93IfcTUao++Xt1Sgb+Zk5dVOCYHabqLtlF5ywSoXIqyFlo0qlshEBxsrzHAGTWkDw==}
-    dev: false
 
   /@next/swc-android-arm-eabi/13.2.3:
     resolution: {integrity: sha512-mykdVaAXX/gm+eFO2kPeVjnOCKwanJ9mV2U0lsUGLrEdMUifPUjiXKc6qFAIs08PvmTMOLMNnUxqhGsJlWGKSw==}
