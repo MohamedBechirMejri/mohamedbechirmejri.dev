@@ -53,7 +53,8 @@
     ],
     "demo": "https://nyutab.vercel.app/",
     "sourceCode": "https://github.com/MohamedBechirMejri/nyutab",
-    "imgStyle": {}
+    "imgStyle": {},
+    "style": {}
   },
   {
     "name": "lab",
