@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
@@ -136,7 +137,9 @@ export function Laptop(props: any) {
                     rotation-x={0}
                     position={[0, 3.63, -0.15]}
                     transform
-                    occlude
+                    occlude="blending"
+                    castShadow
+                    receiveShadow
                   >
                     <div
                       className="h-full"
