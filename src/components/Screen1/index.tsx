@@ -21,8 +21,25 @@ const Screen1 = ({ project }: { project: Project | null }) => {
               animate={{ scaleX: 1 }}
               exit={{ scaleX: 0 }}
               transition={{ ease: "easeInOut", delay: 0.15 }}
-              className="absolute right-0 h-[18rem] w-[24rem] origin-right border bg-slate-900"
-            ></motion.div>
+              className="absolute right-0 grid h-[18rem] w-[24rem] origin-right grid-rows-[auto,auto,auto,auto] border bg-slate-900 text-center text-white"
+            >
+              <h1 className="p-2 text-2xl font-bold">{project.name}</h1>
+              <p>{project.description}</p>
+              <div>
+                {project.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="m-1 rounded bg-white p-1 text-slate-900"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div>
+                <a href={project.demo}>demo</a>
+                <a href={project.sourceCode}>source code</a>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
