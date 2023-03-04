@@ -1,17 +1,8 @@
-import { useState } from "react";
-import projects from "../../../public/json/projects.json";
 import { motion } from "framer-motion";
 import Main from "./Main";
+import type { Project } from "../../types/project";
 
-const Screen1 = () => {
-  const [project, setProject] = useState<{
-    name: string;
-    description: string;
-    tech: string[];
-    demo: string;
-    source: string;
-  } | null>(null);
-
+const Screen1 = ({ project }: { project: Project | null }) => {
   return (
     <div className="relative grid h-full select-none bg-slate-900">
       <Main />
@@ -20,7 +11,9 @@ const Screen1 = () => {
         animate={{ right: "-25rem" }}
         transition={{ duration: 0.5 }}
         className="absolute h-[18rem] w-[22rem] border bg-green-500"
-      ></motion.div>
+      >
+        {project && <h1>{project.name}</h1>}
+      </motion.div>
       <motion.div
         initial={{ left: "-25rem" }}
         animate={{ left: "-25rem" }}

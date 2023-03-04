@@ -11,13 +11,14 @@ Source: https://sketchfab.com/3d-models/asus-rog-zephyrus-duo-16-479cb2e29c7a443
 Title: Asus ROG Zephyrus Duo 16
 */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations, Html } from "@react-three/drei";
 import { LoopOnce, MathUtils } from "three";
 
 import Screen1 from "./Screen1";
 import { useFrame } from "@react-three/fiber";
 import Screen2 from "./Screen2";
+import type { Project } from "../types/project";
 
 export function Laptop(props: any) {
   const group = useRef();
@@ -26,6 +27,8 @@ export function Laptop(props: any) {
     "/assets/3d/asus_rog_zephyrus_duo_16/scene.gltf"
   );
   const { actions } = useAnimations(animations, group);
+
+  const [project, setProject] = useState<Project | null>(null);
 
   useEffect(() => {
     if (actions["Animation"]) {
@@ -105,7 +108,7 @@ export function Laptop(props: any) {
                       className="h-full"
                       onPointerDown={(e) => e.stopPropagation()}
                     >
-                      <Screen2 />
+                      <Screen2 setProject={setProject} />
                     </div>
                   </Html>
                 </mesh>
@@ -161,7 +164,7 @@ export function Laptop(props: any) {
                       className="h-full"
                       onPointerDown={(e) => e.stopPropagation()}
                     >
-                      <Screen1 />
+                      <Screen1 project={project} />
                     </div>
                   </Html>
                 </mesh>

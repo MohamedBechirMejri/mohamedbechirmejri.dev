@@ -1,29 +1,21 @@
 import Image from "next/image";
 import projects from "../../public/json/projects.json";
+import type { Project } from "../types/project";
 
 const Screen2 = ({
   setProject,
 }: {
-  setProject: (
-    project: {
-      name: string;
-      description: string;
-      tech: string[];
-      demo: string;
-      sourceCode: string;
-    } | null
-  ) => void;
+  setProject: (project: Project | null) => void;
 }) => {
   return (
     <div className="grid h-full select-none grid-cols-3 grid-rows-2 bg-[#34353c]">
-      {projects.map((project, i) =>
+      {projects.map((project: Project, i) =>
         i < 5 ? (
           <div
             key={i}
             className="grid place-items-center bg-inherit "
             style={{ ...project.style }}
             onMouseEnter={() => setProject(project)}
-            onMouseLeave={() => setProject(null)}
           >
             <Image
               src={project.logo}
@@ -40,6 +32,7 @@ const Screen2 = ({
         target="_blank"
         rel="noreferrer"
         className="flex items-center justify-center border border-[#33343b] bg-[#33343b] text-[6px] text-white transition-all duration-500 elevation-8 hover:bg-white hover:text-black"
+        onMouseEnter={() => setProject(null)}
       >
         50+ More...
       </a>
