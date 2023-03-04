@@ -17,6 +17,7 @@ import { LoopOnce, MathUtils } from "three";
 
 import Screen1 from "./Screen1";
 import { useFrame } from "@react-three/fiber";
+import Screen2 from "./Screen2";
 
 export function Laptop(props: any) {
   const group = useRef();
@@ -92,7 +93,22 @@ export function Laptop(props: any) {
                   name="Object_15"
                   geometry={nodes.Object_15.geometry}
                   material={materials.panel_2}
-                />
+                >
+                  <Html
+                    className="h-[2.2rem] w-[7.5rem]"
+                    rotation-x={-1.53}
+                    position={[0, 0.03, 0.025]}
+                    transform
+                    occlude="blending"
+                  >
+                    <div
+                      className="h-full"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      <Screen2 />
+                    </div>
+                  </Html>
+                </mesh>
                 <mesh
                   name="Object_16"
                   geometry={nodes.Object_16.geometry}
