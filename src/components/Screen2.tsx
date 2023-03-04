@@ -13,7 +13,7 @@ const Screen2 = ({
         i < 5 ? (
           <div
             key={i}
-            className="grid place-items-center bg-inherit "
+            className="grid cursor-pointer place-items-center bg-inherit"
             style={{ ...project.style }}
             onMouseEnter={() => setProject(project)}
           >
