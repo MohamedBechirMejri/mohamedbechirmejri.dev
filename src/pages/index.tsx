@@ -34,7 +34,7 @@ const Home = () => {
           <Suspense fallback={null}>
             <group
               rotation={[0, 0, 0]}
-              position={[0, 2, 0]}
+              position={[0, 1, 0]}
               scale={[14, 14, 14]}
             >
               <Laptop />
