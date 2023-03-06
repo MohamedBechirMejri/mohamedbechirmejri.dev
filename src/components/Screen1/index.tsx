@@ -74,18 +74,21 @@ const Screen1 = ({ project }: { project: Project | null }) => {
             project.tech.map((t, i) =>
               i <= 5 ? (
                 <motion.p
-                  key={t}
+                  key={project.name + t + i}
                   initial={{ scaleY: 0 }}
                   animate={{ scaleY: 1 }}
                   exit={{ scaleY: 0, transition: { delay: 0.3 } }}
-                  transition={{ ease: "easeInOut", delay: 0.3 }}
+                  transition={{ ease: "easeInOut", delay: 0.5 }}
                   className="origin-top overflow-hidden bg-yellow-500"
                 >
                   <motion.span
                     initial={{ scaleY: 0 }}
                     animate={{ scaleY: 1 }}
                     exit={{ scaleY: 0 }}
-                    transition={{ ease: "easeInOut", delay: 0.5 }}
+                    transition={{
+                      ease: "easeInOut",
+                      delay: 0.7,
+                    }}
                     className="flex h-full origin-top items-center justify-center overflow-y-scroll bg-slate-900 text-center text-sm font-bold text-white"
                   >
                     {t}
