@@ -2,7 +2,7 @@
   {
     "name": "memetube",
     "logo": "/assets/memetube.svg",
-    "description": "MemeTube is a video sharing platform that allows users to upload and share Memes with the world. Users can also comment on videos and like/save them. \n I created it to store my meme collection and share it with my friends. and also to learn how to make PWAs. \n It might not load fast because the firebase quota is exceeded. xD  ",
+    "description": "MemeTube is a video sharing platform for memes. \n I created it to store my meme collection and share it with my friends and learn how to make PWAs. \n It might not load fast because the firebase quota is exceeded. xD  ",
     "tech": ["Nextjs", "TypeScript", "TailwindCSS", "Firebase", "PWA"],
     "demo": "https://memetube.vercel.app/",
     "sourceCode": "https://github.com/MohamedBechirMejri/memetube",
@@ -31,7 +31,7 @@
   {
     "name": "ETCH-A-SKETCH",
     "logo": "/assets/etchasketch.svg",
-    "description": "Replicating the original Etch-A-Sketch Toy. I'm proud of this one since I accurately replicated the original toy while still being a beginner.",
+    "description": "Replicating the original Etch-A-Sketch Toy. \n I'm proud of this one since I accurately replicated the original toy while still being a beginner.",
     "tech": ["HTML", "CSS", "Javascript"],
     "demo": "https://mohamedbechirmejri.github.io/ETCH-A-SKETCH/",
     "sourceCode": "https://github.com/MohamedBechirMejri/ETCH-A-SKETCH",
