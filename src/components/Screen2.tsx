@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import Image from "next/image";
 import projects from "../../public/json/projects.json";
 import type { Project } from "../types/project";
@@ -15,7 +17,19 @@ const Screen2 = ({
             key={i}
             className="grid cursor-pointer place-items-center bg-inherit"
             style={{ ...project.style }}
-            onMouseEnter={() => setProject(project)}
+            onMouseEnter={() => {
+              const checkProject = (p: Project | null) => {
+                if (p && p.name === project.name) return p;
+                if (p === null) return project;
+
+                setTimeout(() => {
+                  setProject(project);
+                }, 1000);
+                return null;
+              };
+              // @ts-ignore
+              setProject(checkProject);
+            }}
           >
             <Image
               src={project.logo}
