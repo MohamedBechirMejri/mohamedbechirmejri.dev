@@ -13,8 +13,11 @@ const Screen2 = ({
     <div className="grid h-full select-none grid-cols-3 grid-rows-2 bg-[#34353c]">
       {projects.map((project: Project, i) =>
         i < 5 ? (
-          <div
+          <a
             key={i}
+            href={project.sourceCode}
+            target="_blank"
+            rel="noreferrer"
             className="grid cursor-pointer place-items-center bg-inherit"
             style={{ ...project.style }}
             onMouseEnter={() => {
@@ -38,7 +41,7 @@ const Screen2 = ({
               height={300}
               style={{ ...project.imgStyle }}
             />
-          </div>
+          </a>
         ) : null
       )}
       <a
