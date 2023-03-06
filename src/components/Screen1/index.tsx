@@ -12,37 +12,91 @@ const Screen1 = ({ project }: { project: Project | null }) => {
           <motion.div
             initial={{ left: "-25rem", scaleX: 0 }}
             animate={{ left: "-25rem", scaleX: 1 }}
-            exit={{ left: "-25rem", scaleX: 0, transition: { delay: 0.3 } }}
+            exit={{ left: "-25rem", scaleX: 0, transition: { delay: 0.5 } }}
             transition={{ ease: "easeInOut" }}
-            className="absolute h-[18rem] w-[24rem] origin-right border bg-yellow-500"
+            className="absolute h-[2rem] w-[24rem] origin-right overflow-hidden bg-yellow-500"
           >
-            <motion.div
+            <motion.h1
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               exit={{ scaleX: 0 }}
               transition={{ ease: "easeInOut", delay: 0.15 }}
-              className="absolute right-0 grid h-[18rem] w-[24rem] origin-right grid-rows-[auto,auto,auto,auto] border bg-slate-900 text-center text-white"
+              className="flex h-full w-[24rem] origin-right items-center justify-center bg-slate-900 text-center font-bold text-white"
             >
-              <h1 className="p-2 text-2xl font-bold">{project.name}</h1>
-              <p>{project.description}</p>
-              <div>
-                {project.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="m-1 rounded bg-white p-1 text-slate-900"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <div>
-                <a href={project.demo}>demo</a>
-                <a href={project.sourceCode}>source code</a>
-              </div>
-            </motion.div>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                {project.name}
+              </motion.span>
+            </motion.h1>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <AnimatePresence>
+        {project && (
+          <motion.div
+            initial={{ left: "-25rem", scaleY: 0 }}
+            animate={{ left: "-25rem", scaleY: 1 }}
+            exit={{ left: "-25rem", scaleY: 0, transition: { delay: 0.3 } }}
+            transition={{ ease: "easeInOut", delay: 0.3 }}
+            className="absolute top-10 h-[10rem] w-[24rem] origin-top overflow-hidden bg-blue-500"
+          >
+            <motion.p
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              exit={{ scaleY: 0 }}
+              transition={{ ease: "easeInOut", delay: 0.5 }}
+              className="flex h-full w-[24rem] origin-top flex-col items-center justify-center gap-2 overflow-y-scroll bg-gray-300 p-2 py-4 text-center text-sm font-bold text-slate-900"
+            >
+              {project.description.split("\n").map((item, key) => {
+                return (
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.7 }}
+                    key={key}
+                  >
+                    {item}
+                  </motion.span>
+                );
+              })}
+            </motion.p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="absolute top-[13.25rem] left-[-25rem] grid h-[5rem] w-[24rem] grid-cols-3 grid-rows-2 gap-4">
+        <AnimatePresence>
+          {project &&
+            project.tech.map((t, i) =>
+              i <= 5 ? (
+                <motion.p
+                  key={t}
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: 1 }}
+                  exit={{ scaleY: 0, transition: { delay: 0.3 } }}
+                  transition={{ ease: "easeInOut", delay: 0.3 }}
+                  className="origin-top overflow-hidden bg-yellow-500"
+                >
+                  <motion.span
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    exit={{ scaleY: 0 }}
+                    transition={{ ease: "easeInOut", delay: 0.5 }}
+                    className="flex h-full origin-top items-center justify-center overflow-y-scroll bg-slate-900 text-center text-sm font-bold text-white"
+                  >
+                    {t}
+                  </motion.span>
+                </motion.p>
+              ) : null
+            )}
+        </AnimatePresence>
+      </div>
+
+      {/* right */}
       <AnimatePresence>
         {project && (
           <motion.div
