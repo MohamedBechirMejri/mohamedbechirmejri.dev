@@ -66,7 +66,7 @@ export function Laptop(props: any) {
     group.current!.position.y = MathUtils.lerp(
       // @ts-ignore
       group.current!.position.y,
-      (-2 + Math.sin(t / 2)) / 20,
+      (-2 + Math.sin(t / 2)) / 50,
       0.1
     );
   });
