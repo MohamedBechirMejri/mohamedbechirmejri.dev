@@ -2,6 +2,7 @@
   {
     "name": "memetube",
     "logo": "/assets/memetube.svg",
+    "preview": "/assets/previews/memetube.png",
     "description": "MemeTube is a video sharing platform for memes. \n I created it to store my meme collection and share it with my friends and learn how to make PWAs. \n It might not load fast because the firebase quota is exceeded. xD  ",
     "tech": ["Nextjs", "TypeScript", "TailwindCSS", "Firebase", "PWA"],
     "demo": "https://memetube.vercel.app/",
@@ -12,6 +13,7 @@
   {
     "name": "odinbook",
     "logo": "/assets/odinbook.svg",
+    "preview": "/assets/previews/odinbook.png",
     "description": "A Facebook clone for The Odin Project.",
     "tech": [
       "Nextjs",
@@ -31,6 +33,7 @@
   {
     "name": "ETCH-A-SKETCH",
     "logo": "/assets/etchasketch.svg",
+    "preview": "/assets/previews/ETCH-A-SKETCH.png",
     "description": "Replicating the original Etch-A-Sketch Toy. \n I'm proud of this one since I accurately replicated the original toy while still being a beginner.",
     "tech": ["HTML", "CSS", "Javascript"],
     "demo": "https://mohamedbechirmejri.github.io/ETCH-A-SKETCH/",
@@ -42,6 +45,7 @@
   {
     "name": "nyutab",
     "logo": "https://raw.githubusercontent.com/MohamedBechirMejri/nyutab/7d0c9c75ff630e42d9d6b3b022073c0320a9b09e/.github/Assets/nyutab-light.svg",
+    "preview": "/assets/previews/nyutab.png",
     "description": "A chrome extension that replaces the bland default new tab page with a beautiful and feature packed one.",
     "tech": [
       "React",
@@ -59,6 +63,7 @@
   {
     "name": "lab",
     "logo": "/assets/lab.svg",
+    "preview": "/assets/previews/lab.png",
     "description": "A Place where I experiment with new technologies and ideas.",
     "tech": ["Nextjs", "TypeScript", "TailwindCSS", "...More"],
     "demo": "https://lab.mohamedbechirmejri.dev",

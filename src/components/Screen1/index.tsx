@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Main from "./Main";
 import type { Project } from "../../types/project";
+import Image from "next/image";
 
 const Screen1 = ({ project }: { project: Project | null }) => {
   return (
@@ -103,19 +104,24 @@ const Screen1 = ({ project }: { project: Project | null }) => {
       <AnimatePresence>
         {project && (
           <motion.div
-            initial={{ right: "-25rem", scaleX: 0 }}
-            animate={{ right: "-25rem", scaleX: 1 }}
-            exit={{ right: "-25rem", scaleX: 0, transition: { delay: 0.3 } }}
+            initial={{ right: "-27rem", scaleX: 0 }}
+            animate={{ right: "-27rem", scaleX: 1 }}
+            exit={{ right: "-27rem", scaleX: 0, transition: { delay: 0.3 } }}
             transition={{ ease: "easeInOut" }}
-            className="absolute h-[18rem] w-[24rem] origin-left border bg-yellow-500"
+            className="absolute h-[16rem] w-[26rem] origin-left bg-yellow-500"
           >
-            <motion.div
+            <motion.a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               exit={{ scaleX: 0 }}
               transition={{ ease: "easeInOut", delay: 0.15 }}
-              className="absolute left-0 h-[18rem] w-[24rem] origin-left border bg-slate-900"
-            ></motion.div>
+              className="absolute left-0 h-[16rem] w-[26rem] origin-left border bg-slate-900"
+            >
+              <Image src={project.preview} alt={project.name} fill />
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>

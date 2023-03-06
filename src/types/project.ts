@@ -5,6 +5,7 @@ export type Project = {
   demo: string;
   sourceCode: string;
   logo: string;
+  preview: string;
   style: object;
   imgStyle: object;
 };
