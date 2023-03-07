@@ -1,10 +1,14 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
-import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import Head from "next/head";
-import { Laptop } from "../components/Laptop";
-import { Suspense } from "react";
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(() => import("../components/Scene"), {
+  ssr: false,
+  loading: () => (
+    <h1 className="fixed flex h-[100svh] w-[100svw] animate-pulse items-center justify-center text-8xl font-bold">
+      Loading...
+    </h1>
+  ),
+});
 
 const Home = () => {
   return (
@@ -15,45 +19,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-[100svh] w-[100svw]">
-        <Canvas>
-          <pointLight position={[10, 10, 10]} intensity={1.5} />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-          <spotLight
-            position={[-10, -10, -10]}
-            angle={0.15}
-            penumbra={1}
-            castShadow
-          />
-          <spotLight
-            position={[0, 10, -2]}
-            angle={0.15}
-            penumbra={1}
-            castShadow
-          />
-
-          <Suspense fallback={null}>
-            <group
-              rotation={[0, 0, 0]}
-              position={[0, 1, 0]}
-              scale={[14, 14, 14]}
-            >
-              <Laptop />
-            </group>
-            <Environment preset="city" />
-          </Suspense>
-          <ContactShadows
-            position={[0, -4.5, 0]}
-            scale={20}
-            blur={2}
-            far={4.5}
-          />
-          <OrbitControls
-            enablePan={false}
-            enableZoom={false}
-            minPolarAngle={Math.PI / 2.2}
-            maxPolarAngle={Math.PI / 2.2}
-          />
-        </Canvas>
+        <Scene />
       </div>
     </>
   );
