@@ -5,6 +5,7 @@ specifiers:
   '@prisma/client': ^4.11.0
   '@react-three/drei': ^9.57.0
   '@react-three/fiber': ^8.11.5
+  '@react-three/postprocessing': ^2.7.0
   '@tailwindcss/aspect-ratio': ^0.4.2
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/line-clamp': ^0.4.2
@@ -43,6 +44,7 @@ dependencies:
   '@prisma/client': 4.11.0_prisma@4.11.0
   '@react-three/drei': 9.57.0_inexst6w7ngy4lgswyvo7qonpy
   '@react-three/fiber': 8.11.5_73epb4osyabtjyiaeamriercbi
+  '@react-three/postprocessing': 2.7.0_7tdwdeies4nkywezng5fw2maly
   '@types/three': 0.149.0
   '@vercel/analytics': 0.1.11_react@18.2.0
   framer-motion: 10.0.1_biqbaboplfbrettd7655fr4n2y
@@ -378,7 +380,7 @@ packages:
   /@radix-ui/popper/0.1.0:
     resolution: {integrity: sha512-uzYeElL3w7SeNMuQpXiFlBhTT+JyaNMCwDfjKkrzugEcYrf5n52PHqncNdQPUtR42hJh8V9FsqyEDbDxkeNjJQ==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.21.0
       csstype: 3.1.1
     dev: false
 
@@ -393,7 +395,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.21.0
       '@radix-ui/react-primitive': 0.1.3_react@18.2.0
       react: 18.2.0
     dev: false
@@ -540,7 +542,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.21.0
       react: 18.2.0
     dev: false
 
@@ -597,7 +599,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.21.0
       react: 18.2.0
     dev: false
 
@@ -614,7 +616,7 @@ packages:
   /@radix-ui/rect/0.1.1:
     resolution: {integrity: sha512-g3hnE/UcOg7REdewduRPAK88EPuLZtaq7sA9ouu8S+YEtnyFRI16jgv6GZYe3VMoQLL1T171ebmEPtDjyxWLzw==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.21.0
     dev: false
 
   /@react-spring/animated/9.6.1_react@18.2.0:
@@ -745,6 +747,22 @@ packages:
       suspend-react: 0.0.8_react@18.2.0
       three: 0.150.1
       zustand: 3.7.2_react@18.2.0
+    dev: false
+
+  /@react-three/postprocessing/2.7.0_7tdwdeies4nkywezng5fw2maly:
+    resolution: {integrity: sha512-lJfV8GYp+L1SlGRcl8QPUg9QMdO+8ojW2kfaEc/MuvoI4rX3TRhVd3qFjjF++0bBmzt8LeQpDHCOHFAaT3MNYA==}
+    peerDependencies:
+      '@react-three/fiber': '>=7.0'
+      react: '>=17.0'
+      three: '>=0.136.0'
+    dependencies:
+      '@react-three/fiber': 8.11.5_73epb4osyabtjyiaeamriercbi
+      postprocessing: 6.30.1_three@0.150.1
+      react: 18.2.0
+      react-merge-refs: 1.1.0
+      screen-space-reflections: 2.5.0_cotodhiibm2dyb5g5a7svh4opa
+      three: 0.150.1
+      three-stdlib: 2.21.8_three@0.150.1
     dev: false
 
   /@rushstack/eslint-patch/1.2.0:
@@ -2905,6 +2923,15 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postprocessing/6.30.1_three@0.150.1:
+    resolution: {integrity: sha512-GkBrQtX6KjNz+Pz3+ABvP1aXKCCW7h/tuE37wlM90WZLbaGfJ7eSIBN2gPgKExuK584IPde0YOoNiuWMr7PNCQ==}
+    engines: {node: '>= 0.13.2'}
+    peerDependencies:
+      three: '>= 0.138.0 < 0.151.0'
+    dependencies:
+      three: 0.150.1
+    dev: false
+
   /potpack/1.0.2:
     resolution: {integrity: sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==}
     dev: false
@@ -3210,6 +3237,16 @@ packages:
       loose-envify: 1.4.0
     dev: false
 
+  /screen-space-reflections/2.5.0_cotodhiibm2dyb5g5a7svh4opa:
+    resolution: {integrity: sha512-fWSDMhJS0xwD3LTxRRch7Lb9NzxsR66sCmtDmAA7i+OGnghUrBBsrha85ng7StnCBaLq/BKmZ97dLxWd1XgWdQ==}
+    peerDependencies:
+      postprocessing: '>=6.28.0'
+      three: '>=0.141.0'
+    dependencies:
+      postprocessing: 6.30.1_three@0.150.1
+      three: 0.150.1
+    dev: false
+
   /semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
     hasBin: true
@@ -3442,7 +3479,7 @@ packages:
     peerDependencies:
       three: '>=0.122.0'
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.21.0
       '@types/offscreencanvas': 2019.7.0
       '@webgpu/glslang': 0.0.15
       chevrotain: 10.4.2
