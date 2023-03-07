@@ -44,7 +44,7 @@
 
   {
     "name": "nyutab",
-    "logo": "https://raw.githubusercontent.com/MohamedBechirMejri/nyutab/7d0c9c75ff630e42d9d6b3b022073c0320a9b09e/.github/Assets/nyutab-light.svg",
+    "logo": "/assets/nyutab.svg",
     "preview": "/assets/previews/nyutab.png",
     "description": "A chrome extension that replaces the bland default new tab page with a beautiful and feature packed one.",
     "tech": [
