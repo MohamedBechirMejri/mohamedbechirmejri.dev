@@ -1,6 +1,10 @@
 import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
-
+import {
+  EffectComposer,
+  DepthOfField,
+  Bloom,
+} from "@react-three/postprocessing";
 import { Laptop } from "../components/Laptop";
 import { Suspense } from "react";
 
@@ -30,6 +34,15 @@ const Scene = () => {
         minPolarAngle={Math.PI / 2.2}
         maxPolarAngle={Math.PI / 2.2}
       />
+      <EffectComposer>
+        <DepthOfField
+          focusDistance={0}
+          focalLength={0.02}
+          bokehScale={2}
+          height={480}
+        />
+        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} />
+      </EffectComposer>
     </Canvas>
   );
 };
