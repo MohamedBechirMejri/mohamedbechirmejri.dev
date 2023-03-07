@@ -27,7 +27,7 @@ const Screen2 = ({
 
                 setTimeout(() => {
                   setProject(project);
-                }, 1000);
+                }, 1300);
                 return null;
               };
               // @ts-ignore
