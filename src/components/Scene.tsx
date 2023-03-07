@@ -35,12 +35,7 @@ const Scene = () => {
         maxPolarAngle={Math.PI / 2.2}
       />
       <EffectComposer>
-        <DepthOfField
-          focusDistance={0}
-          focalLength={0.02}
-          bokehScale={2}
-          height={480}
-        />
+        <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} />
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} />
       </EffectComposer>
     </Canvas>
