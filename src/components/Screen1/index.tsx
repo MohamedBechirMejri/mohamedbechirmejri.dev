@@ -10,7 +10,7 @@ const Screen1 = ({ project }: { project: Project | null }) => {
       <Main />
 
       {/* preload the images */}
-      {projects.map((p, i) => (
+      {projects.map((p) => (
         <div key={"preload-" + p.name} className="absolute h-0 w-0">
           <Image
             key={p.preview}
