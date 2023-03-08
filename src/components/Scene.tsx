@@ -40,12 +40,7 @@ const Scene = () => {
         </Suspense>
       </PresentationControls>
       <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
-      {/* <OrbitControls
-        enablePan={false}
-        enableZoom={false}
-        minPolarAngle={Math.PI / 2.2}
-        maxPolarAngle={Math.PI / 2.2}
-      /> */}
+
       <EffectComposer>
         <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} />
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} />
