@@ -3,6 +3,7 @@ import {
   ContactShadows,
   Environment,
   PresentationControls,
+  Tetrahedron,
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -11,10 +12,11 @@ import {
 } from "@react-three/postprocessing";
 import { Laptop } from "../components/Laptop";
 import { Suspense } from "react";
+import { useControls } from "leva";
 
 const Scene = () => {
   return (
-    <Canvas>
+    <Canvas className="bg-black">
       <pointLight position={[10, 10, 10]} intensity={1.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <spotLight
@@ -39,11 +41,21 @@ const Scene = () => {
           <Environment preset="city" />
         </Suspense>
       </PresentationControls>
-      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
+
+      <Tetrahedron
+        args={[1, 0]}
+        position={[8, -4, -3]}
+        rotation={[1.8, 1.05, 1.02]}
+        receiveShadow
+      >
+        <meshBasicMaterial color={[1.6, 1.5, 4.7]} toneMapped={false} />
+      </Tetrahedron>
+
+      {/* <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} /> */}
 
       <EffectComposer>
         <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} />
-        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} />
+        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} mipmapBlur />
       </EffectComposer>
     </Canvas>
   );
