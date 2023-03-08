@@ -1,5 +1,9 @@
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
+import {
+  ContactShadows,
+  Environment,
+  PresentationControls,
+} from "@react-three/drei";
 import {
   EffectComposer,
   DepthOfField,
@@ -20,20 +24,28 @@ const Scene = () => {
         castShadow
       />
       <spotLight position={[0, 10, -2]} angle={0.15} penumbra={1} castShadow />
-
-      <Suspense fallback={null}>
-        <group rotation={[0, 0, 0]} position={[0, 1, 0]} scale={[14, 14, 14]}>
-          <Laptop />
-        </group>
-        <Environment preset="city" />
-      </Suspense>
+      <PresentationControls
+        global
+        config={{ mass: 2, tension: 500 }}
+        snap={{ mass: 4, tension: 500 }}
+        rotation={[0, 0, 0]}
+        polar={[-Math.PI / 3, Math.PI / 3]}
+        azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+      >
+        <Suspense fallback={null}>
+          <group rotation={[0, 0, 0]} position={[0, 1, 0]} scale={[14, 14, 14]}>
+            <Laptop />
+          </group>
+          <Environment preset="city" />
+        </Suspense>
+      </PresentationControls>
       <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
-      <OrbitControls
+      {/* <OrbitControls
         enablePan={false}
         enableZoom={false}
         minPolarAngle={Math.PI / 2.2}
         maxPolarAngle={Math.PI / 2.2}
-      />
+      /> */}
       <EffectComposer>
         <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} />
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} />
