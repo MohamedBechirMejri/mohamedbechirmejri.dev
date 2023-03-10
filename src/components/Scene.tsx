@@ -36,7 +36,7 @@ const Scene = () => {
       >
         <Suspense fallback={null}>
           <group rotation={[0, 0, 0]} position={[0, 1, 0]} scale={[14, 14, 14]}>
-            <Laptop />
+            {/* <Laptop /> */}
           </group>
           <Environment preset="city" />
         </Suspense>
@@ -53,10 +53,10 @@ const Scene = () => {
 
       {/* <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} /> */}
 
-      <EffectComposer>
+      {/* <EffectComposer>
         <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} />
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} mipmapBlur />
-      </EffectComposer>
+      </EffectComposer> */}
     </Canvas>
   );
 };
