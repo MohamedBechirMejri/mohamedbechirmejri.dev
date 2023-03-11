@@ -39,7 +39,7 @@ const Scene = () => {
 
       {/* <Audio audioUrl="/assets/mp3/bittersweet.mp3" /> */}
 
-      {/* <Background /> */}
+      <Background />
 
       <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
       <EffectComposer>
