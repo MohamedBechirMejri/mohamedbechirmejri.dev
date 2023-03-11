@@ -7,10 +7,11 @@ import {
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { Laptop } from "./Laptop";
 import { Suspense } from "react";
+import Background from "./Background";
 
 const Scene = () => {
   return (
-    <Canvas className="bg-black">
+    <Canvas className="bg-gradient-to-br from-[#764BA2] to-[#E2D1C3]">
       <pointLight position={[10, 10, 10]} intensity={1.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <spotLight
@@ -38,8 +39,9 @@ const Scene = () => {
 
       {/* <Audio audioUrl="/assets/mp3/bittersweet.mp3" /> */}
 
-      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
+      {/* <Background /> */}
 
+      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
       <EffectComposer>
         {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} /> */}
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} mipmapBlur />
