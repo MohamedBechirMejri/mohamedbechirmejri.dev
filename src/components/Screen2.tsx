@@ -3,6 +3,7 @@
 import Image from "next/image";
 import projects from "../../public/json/projects.json";
 import type { Project } from "../types/project";
+import { AiFillGithub } from "react-icons/ai";
 
 const Screen2 = ({
   setProject,
@@ -48,10 +49,10 @@ const Screen2 = ({
         href="https://github.com/MohamedBechirMejri"
         target="_blank"
         rel="noreferrer"
-        className="flex items-center justify-center border border-[#33343b] bg-[#33343b] text-[6px] text-white transition-all duration-500 elevation-8 hover:bg-white hover:text-black"
+        className="flex items-center justify-center gap-[2px] border border-[#33343b] bg-[#33343b] text-[5px] text-white transition-all duration-500 elevation-8 hover:bg-white hover:text-black"
         onMouseEnter={() => setProject(null)}
       >
-        50+ More...
+        <AiFillGithub /> 50+ More...
       </a>
     </div>
   );
