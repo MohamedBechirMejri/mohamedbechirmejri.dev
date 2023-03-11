@@ -35,11 +35,11 @@ const Scene = () => {
           </group>
           <Environment preset="city" />
         </Suspense>
-      </PresentationControls>
 
       {/* <Audio audioUrl="/assets/mp3/bittersweet.mp3" /> */}
 
       <Background />
+      </PresentationControls>
 
       <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
       <EffectComposer>
