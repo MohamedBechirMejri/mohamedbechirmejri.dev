@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "framer-motion";
-import Main from "./Main";
 import type { Project } from "../../types/project";
 import Image from "next/image";
 import projects from "../../../public/json/projects.json";
@@ -7,7 +6,6 @@ import projects from "../../../public/json/projects.json";
 const Screen1 = ({ project }: { project: Project | null }) => {
   return (
     <div className="relative grid h-full select-none bg-slate-900">
-      <Main />
 
       {/* preload the images */}
       {projects.map((p) => (

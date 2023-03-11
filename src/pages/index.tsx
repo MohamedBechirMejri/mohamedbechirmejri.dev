@@ -1,5 +1,6 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import Footer from "../components/Footer";
 
 const Scene = dynamic(() => import("../components/Scene"), {
   ssr: false,
@@ -20,6 +21,7 @@ const Home = () => {
       </Head>
       <div className="h-[100svh] w-[100svw]">
         <Scene />
+        <Footer />
       </div>
     </>
   );
