@@ -139,7 +139,7 @@ const Screen1 = ({ project }: { project: Project | null }) => {
               animate={{ scaleX: 1 }}
               exit={{ scaleX: 0 }}
               transition={{ ease: "easeInOut", delay: 0.15 }}
-              className="absolute left-0 h-[16rem] w-[26rem] origin-left border bg-slate-900"
+              className="absolute left-0 h-[16rem] w-[26rem] origin-left bg-slate-900"
             >
               <Image src={project.preview} alt={project.name} fill />
             </motion.a>
