@@ -3,16 +3,10 @@ import {
   ContactShadows,
   Environment,
   PresentationControls,
-  Tetrahedron,
 } from "@react-three/drei";
-import {
-  EffectComposer,
-  DepthOfField,
-  Bloom,
-} from "@react-three/postprocessing";
-import { Laptop } from "../components/Laptop";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import { Laptop } from "./Laptop";
 import { Suspense } from "react";
-import { useControls } from "leva";
 
 const Scene = () => {
   return (
@@ -36,27 +30,20 @@ const Scene = () => {
       >
         <Suspense fallback={null}>
           <group rotation={[0, 0, 0]} position={[0, 1, 0]} scale={[14, 14, 14]}>
-            {/* <Laptop /> */}
+            <Laptop />
           </group>
           <Environment preset="city" />
         </Suspense>
       </PresentationControls>
 
-      <Tetrahedron
-        args={[1, 0]}
-        position={[8, -4, -3]}
-        rotation={[1.8, 1.05, 1.02]}
-        receiveShadow
-      >
-        <meshBasicMaterial color={[1.6, 1.5, 4.7]} toneMapped={false} />
-      </Tetrahedron>
+      {/* <Audio audioUrl="/assets/mp3/bittersweet.mp3" /> */}
 
-      {/* <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} /> */}
+      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
 
-      {/* <EffectComposer>
-        <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} />
+      <EffectComposer>
+        {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} /> */}
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} mipmapBlur />
-      </EffectComposer> */}
+      </EffectComposer>
     </Canvas>
   );
 };
