@@ -14,10 +14,10 @@ const Main = () => {
   const [username, setUsername] = useState<string>("");
 
   return (
-    <div className="grid grid-rows-[auto,1fr,auto] text-center">
-      <h1 className="bg-white p-2 text-3xl font-bold ">Mohamed Bechir Mejri</h1>
+    <div className="grid grid-rows-[1fr,auto] text-center">
+      {/* <h1 className="bg-white p-2 text-3xl font-bold ">Mohamed Bechir Mejri</h1> */}
       <div className="grid grid-rows-[auto,1fr] text-white">
-        <h2 className="p-2 text-2xl font-bold">Full Stack Developer</h2>
+        <h2 className="p-4 text-2xl font-bold">Connect with Me</h2>
         <div className="grid grid-rows-2">
           <div className="flex items-center justify-center gap-4 text-3xl">
             <MdAlternateEmail
@@ -66,7 +66,7 @@ const Main = () => {
           </AnimatePresence>
         </div>
       </div>
-      <h2 className="flex items-center justify-center gap-2 bg-white p-1">
+      <h2 className="flex items-center justify-center gap-2 p-1 text-white">
         <motion.span
           animate={{ y: [-2, 2, -2] }}
           transition={{ duration: 1, repeat: Infinity }}
