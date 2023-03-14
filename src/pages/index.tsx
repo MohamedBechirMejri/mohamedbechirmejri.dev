@@ -42,7 +42,7 @@ const Home = () => {
     <>
       <Head>
         <title>Mohamed Bechir Mejri</title>
-        <meta name="description" content="MBM" />
+        <meta name="description" content="Web Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-[100svh] w-[100svw]">
