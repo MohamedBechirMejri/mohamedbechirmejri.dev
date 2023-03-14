@@ -108,7 +108,7 @@ export function Laptop(props: any) {
                       className="h-full"
                       onPointerDown={(e) => e.stopPropagation()}
                     >
-                      <Screen2 setProject={setProject} />
+                      <Screen2 project={project} />
                     </div>
                   </Html>
                 </mesh>
@@ -164,7 +164,7 @@ export function Laptop(props: any) {
                       className="h-full"
                       onPointerDown={(e) => e.stopPropagation()}
                     >
-                      <Screen1 project={project} />
+                      <Screen1 project={project} setProject={setProject} />
                     </div>
                   </Html>
                 </mesh>

@@ -1,59 +1,41 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
-import Image from "next/image";
-import projects from "../../public/json/projects.json";
+import { AnimatePresence, motion } from "framer-motion";
 import type { Project } from "../types/project";
-import { AiFillGithub } from "react-icons/ai";
 
-const Screen2 = ({
-  setProject,
-}: {
-  setProject: (project: Project | null) => void;
-}) => {
+const Screen2 = ({ project }: { project: Project | null }) => {
   return (
-    <div className="grid h-full select-none grid-cols-3 grid-rows-2 bg-[#34353c]">
-      {projects.map((project: Project, i) =>
-        i < 5 ? (
-          <a
-            key={i}
-            href={project.sourceCode}
-            target="_blank"
-            rel="noreferrer"
-            className="grid cursor-pointer place-items-center bg-inherit"
-            style={{ ...project.style }}
-            onMouseEnter={() => {
-              const checkProject = (p: Project | null) => {
-                if (p && p.name === project.name) return p;
-                if (p === null) return project;
-
-                setTimeout(() => {
-                  setProject(project);
-                }, 1300);
-                return null;
-              };
-              // @ts-ignore
-              setProject(checkProject);
-            }}
+    <div className="h-full select-none bg-slate-900">
+      <AnimatePresence>
+        {project && (
+          <motion.div
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            exit={{ scaleY: 0, transition: { delay: 0.3 } }}
+            transition={{ ease: "easeInOut", delay: 0.3 }}
+            className="h-full w-full origin-top overflow-hidden bg-blue-500"
           >
-            <Image
-              src={project.logo}
-              alt={project.name}
-              width={300}
-              height={300}
-              style={{ ...project.imgStyle }}
-            />
-          </a>
-        ) : null
-      )}
-      <a
-        href="https://github.com/MohamedBechirMejri"
-        target="_blank"
-        rel="noreferrer"
-        className="flex items-center justify-center gap-[2px] border border-[#33343b] bg-[#33343b] text-[5px] text-white transition-all duration-500 elevation-8 hover:bg-white hover:text-black"
-        onMouseEnter={() => setProject(null)}
-      >
-        <AiFillGithub /> 50+ More...
-      </a>
+            <motion.p
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              exit={{ scaleY: 0 }}
+              transition={{ ease: "easeInOut", delay: 0.5 }}
+              className="flex h-full w-full origin-top flex-col items-center justify-center gap-[2px] bg-gray-300 p-2 py-4 text-center text-[4px] font-bold text-slate-900"
+            >
+              {project.description.split("\n").map((item, key) => {
+                return (
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.7 }}
+                    key={key}
+                  >
+                    {item}
+                  </motion.span>
+                );
+              })}
+            </motion.p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
