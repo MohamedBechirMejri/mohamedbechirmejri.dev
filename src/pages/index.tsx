@@ -11,6 +11,15 @@ const Scene = dynamic(() => import("../components/Scene"), {
   ),
 });
 
+const MobileScene = dynamic(() => import("../components/MobileScene"), {
+  ssr: false,
+  loading: () => (
+    <h1 className="fixed flex h-[100svh] w-[100svw] animate-pulse items-center justify-center text-3xl font-bold">
+      Loading...
+    </h1>
+  ),
+});
+
 const Home = () => {
   return (
     <>
@@ -20,7 +29,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-[100svh] w-[100svw]">
-        <Scene />
+        {/* <Scene /> */}
+        <MobileScene />
         <Footer />
       </div>
     </>
