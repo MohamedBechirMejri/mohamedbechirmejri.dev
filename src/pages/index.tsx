@@ -1,6 +1,7 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 const Scene = dynamic(() => import("../components/Scene"), {
   ssr: false,
@@ -21,6 +22,22 @@ const MobileScene = dynamic(() => import("../components/MobileScene"), {
 });
 
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -29,8 +46,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-[100svh] w-[100svw]">
-        {/* <Scene /> */}
-        <MobileScene />
+        {isMobile ? <MobileScene /> : <Scene />}
         <Footer />
       </div>
     </>
