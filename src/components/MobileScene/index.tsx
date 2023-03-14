@@ -1,15 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import {
-  ContactShadows,
-  Environment,
-  PresentationControls,
-} from "@react-three/drei";
-import {
-  EffectComposer,
-  Bloom,
-  DepthOfField,
-} from "@react-three/postprocessing";
-import { Suspense } from "react";
+import { ContactShadows, PresentationControls } from "@react-three/drei";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
+
 import Background from "./Background";
 
 const MobileScene = () => {
@@ -37,7 +29,7 @@ const MobileScene = () => {
 
       <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
       <EffectComposer>
-        <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} />
+        {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} /> */}
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} mipmapBlur />
       </EffectComposer>
     </Canvas>

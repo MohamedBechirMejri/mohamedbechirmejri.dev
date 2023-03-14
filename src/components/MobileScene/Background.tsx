@@ -9,7 +9,7 @@ const Background = () => {
         rotation={[0.2, 0.5, 0]}
         castShadow
         maxWidth={2}
-        fontSize={1.27}
+        fontSize={1.25}
         textAlign="center"
       >
         Mohamed Bechir Mejri
