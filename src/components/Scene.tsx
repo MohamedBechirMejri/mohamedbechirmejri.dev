@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import {
   ContactShadows,
   Environment,
+  Html,
   PresentationControls,
 } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
@@ -29,16 +30,16 @@ const Scene = () => {
         polar={[-Math.PI / 3, Math.PI / 3]}
         azimuth={[-Math.PI / 1.4, Math.PI / 2]}
       >
-        <Suspense fallback={null}>
+        <Suspense fallback={<Html>loading...</Html>}>
           <group rotation={[0, 0, 0]} position={[0, 1, 0]} scale={[14, 14, 14]}>
             <Laptop />
           </group>
           <Environment preset="city" />
         </Suspense>
 
-      {/* <Audio audioUrl="/assets/mp3/bittersweet.mp3" /> */}
+        {/* <Audio audioUrl="/assets/mp3/bittersweet.mp3" /> */}
 
-      <Background />
+        <Background />
       </PresentationControls>
 
       <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
