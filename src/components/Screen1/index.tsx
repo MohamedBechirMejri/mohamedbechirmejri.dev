@@ -9,7 +9,7 @@ const Screen1 = ({
   setProject,
 }: {
   project: Project | null;
-  setProject: any;
+  setProject: (project: Project | null) => void;
 }) => {
   return (
     <div className="relative grid h-full select-none grid-cols-4 grid-rows-1 bg-slate-900">
