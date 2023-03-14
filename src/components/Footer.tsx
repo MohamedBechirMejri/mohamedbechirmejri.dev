@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 left-0 z-10 flex w-full items-center justify-between p-4 text-xl text-[#1f1818]">
+    <footer className="fixed bottom-0 left-0 z-10 flex items-center justify-between p-4 text-xl text-[#1f1818]">
       <div className="flex flex-col items-center justify-center gap-2">
         {/* Gmail */}
         <a
@@ -131,8 +131,9 @@ const Footer = () => {
         </a>
       </div>
 
-      <p className="flex select-none items-center gap-2 text-sm font-extrabold">
-        {/* <a
+      {/*
+       <p className="flex select-none items-center gap-2 text-sm font-extrabold">
+        <a
           href="https://github.com/MohamedBechirMejri/mohamedbechirmejri.dev"
           target="_blank"
           rel="noreferrer"
@@ -140,8 +141,9 @@ const Footer = () => {
         >
           Source Code
         </a>
-        •<span> 2023</span> */}
+        •<span> 2023</span>
       </p>
+      */}
     </footer>
   );
 };
