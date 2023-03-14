@@ -32,15 +32,6 @@ const MobileScene = () => {
         polar={[-Math.PI / 3, Math.PI / 3]}
         azimuth={[-Math.PI / 1.4, Math.PI / 2]}
       >
-        <Suspense fallback={null}>
-          <group
-            rotation={[0, 0, 0]}
-            position={[0, 1, 0]}
-            scale={[14, 14, 14]}
-          ></group>
-          <Environment preset="city" />
-        </Suspense>
-
         <Background />
       </PresentationControls>
 
