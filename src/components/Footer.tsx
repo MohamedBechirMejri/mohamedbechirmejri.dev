@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 left-0 z-10 flex items-center justify-between p-4 text-xl text-[#1f1818]">
-      <div className="flex flex-col items-center justify-center gap-2">
+    <footer className="fixed bottom-0 left-1/2 z-10 flex -translate-x-1/2 items-center justify-between p-4 text-xl text-[#1f1818] sm:left-0 sm:-translate-x-0">
+      <div className="flex items-center justify-center gap-4 sm:gap-2 sm:flex-col">
         {/* Gmail */}
         <a
           href="mailto:mohamedbechirmejri.dev@gmail.com"
