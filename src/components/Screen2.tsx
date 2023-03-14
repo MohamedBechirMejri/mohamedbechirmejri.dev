@@ -3,7 +3,7 @@ import type { Project } from "../types/project";
 
 const Screen2 = ({ project }: { project: Project | null }) => {
   return (
-    <div className="h-full select-none bg-slate-900">
+    <div className="h-full select-none bg-slate-900 bg-[url(/assets/op.jpg)] bg-cover bg-center bg-no-repeat">
       <AnimatePresence>
         {project && (
           <motion.div
