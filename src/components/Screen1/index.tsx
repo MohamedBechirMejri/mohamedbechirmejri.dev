@@ -48,7 +48,7 @@ const Screen1 = ({
                 animate={{ scaleX: 1 }}
                 exit={{ scaleX: 0, transition: { delay: 0.6 } }}
                 transition={{ ease: "easeInOut", delay: 0.15 }}
-                className="flex h-full origin-right items-center justify-center text-slate-900 text-center font-bold bg-white"
+                className="flex h-full origin-right items-center justify-center bg-white text-center font-bold text-slate-900"
               >
                 <motion.span
                   initial={{ opacity: 0 }}
@@ -90,7 +90,7 @@ const Screen1 = ({
             </motion.div>
           )}
         </AnimatePresence>
-        <span className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 p-9 text-white text-center">
+        <span className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 p-9 text-center text-white">
           Hover on projects to view more details.
         </span>
       </div>
@@ -116,6 +116,8 @@ const Screen1 = ({
                   return null;
                 };
 
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
                 setProject(checkProject);
               }}
             >
